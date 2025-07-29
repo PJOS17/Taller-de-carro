@@ -1,6 +1,3 @@
-//Pablo Orantes 25563
-//Kevin Moreno 25730
-
 public class Carro {
     private String modelo;
     private int anio;
@@ -18,5 +15,8 @@ public class Carro {
         System.out.println("El carro modelo " + modelo + " del año " + anio + " está listo para entrega.");
     }
 
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 }
 

@@ -1,7 +1,3 @@
-//Pablo Orantes 25563
-//Kevin Moreno 25730
-
-
 public class LLantas {
     private String marca;
     private int tamano;
@@ -12,11 +8,17 @@ public class LLantas {
     }
 
     public void mostrarInformacion() {
-        System.out.println("Marca de llantas: " + marca + ", Tamaño: " + tamano + " cm");
+        System.out.println("Marca: " + marca + ", Tamaño: " + tamano + " cm");
     }
 
     public void mostrarMarca() {
-        System.out.println("Marca: " + marca);
+        System.out.println("Marca de las llantas: " + marca);
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 }
+
+
 

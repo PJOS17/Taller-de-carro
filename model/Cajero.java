@@ -1,6 +1,6 @@
 //Pablo Orantes 25563
 //Kevin Moreno 25730
- 
+
 
 public class Cajero {
     private String nombre;

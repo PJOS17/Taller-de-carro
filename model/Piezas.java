@@ -1,7 +1,3 @@
-//Pablo Orantes 25563
-//Kevin Moreno 25730
-
-
 public class Piezas {
     private String tipo;
     private int cantidad;
@@ -22,4 +18,13 @@ public class Piezas {
             System.out.println("No hay existencias de " + tipo + ".");
         }
     }
+
+    public void setCantidad(int cantidad) {
+    this.cantidad = cantidad;
+    }
+
+
+    
 }
+
+
