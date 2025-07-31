@@ -49,7 +49,8 @@ public class ProductoControlador {
                     carro.describirCarro();
                     break;
                 case 7:
-                    vista.mostrarMensaje("Gracias, feliz tarde");
+                    String nuevoModelo = vista.pedirTexto("Nuevo modelo de carro: ");
+                    carro.setModelo(nuevoModelo);
                     break;
                 case 8:
                     int nuevaCantidad = vista.pedirEntero("Nueva cantidad de piezas: ");
@@ -60,8 +61,7 @@ public class ProductoControlador {
                     llantas.setMarca(nuevaMarca);
                     break;
                 case 10:
-                    String nuevoModelo = vista.pedirTexto("Nuevo modelo de carro: ");
-                    carro.setModelo(nuevoModelo);
+                    vista.mostrarMensaje("Gracias, feliz tarde");
                     break;
                 default:
                     vista.mostrarMensaje("Opción no válida.");

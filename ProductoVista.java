@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class ProductoVista {
+    
     private Scanner scanner = new Scanner(System.in);
 
     public String pedirTexto(String mensaje) {
@@ -27,13 +28,19 @@ public class ProductoVista {
         System.out.println("4. Verificar stock de piezas");
         System.out.println("5. Ver marca de llantas");
         System.out.println("6. Describir carro");
-        System.out.println("7. Salir");
+        System.out.println("7. Cambiar modelo de carro ");
         System.out.println("8. Actualizar cantidad de piezas");
         System.out.println("9. Cambiar marca de llantas");
-        System.out.println("10. Cambiar modelo de carro");
+        System.out.println("10.Salir");
     }
 
     public int pedirOpcion() {
         return pedirEntero("Elija una opción: ");
     }
+    public static void main(String[] args) {
+        ProductoVista vista = new ProductoVista();
+        ProductoControlador controlador = new ProductoControlador(vista);
+        controlador.ejecutarMenu();
+    }
 }
+

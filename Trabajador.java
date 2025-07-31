@@ -1,77 +1,48 @@
-//Pablo Orantes 25563
-//Kevin Moreno 25730
-
-import java.util.Scanner;
-
 public class Trabajador {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    private String nombre;
+    private int edad;
+    private String puesto;
+    private double salario;
+    private String horario;
 
-        // Pedir datos del Cajero
-        System.out.print("Ingrese el nombre del Cajero: ");
-        String nombreCajero = scanner.nextLine();
-        System.out.print("Ingrese la edad del Cajero: ");
-        int edadCajero = scanner.nextInt();
-        scanner.nextLine(); // limpiar buffer
+    public Trabajador(String nombre, int edad, String puesto) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.puesto = puesto;
+    }
 
-        Cajero cajero = new Cajero(nombreCajero, edadCajero);
+    public String getNombre() {
+        return nombre;
+    }
 
-        // Pedir datos del Encargado
-        System.out.print("Ingrese el nombre del Encargado: ");
-        String nombreEncargado = scanner.nextLine();
-        System.out.print("Ingrese la edad del Encargado: ");
-        int edadEncargado = scanner.nextInt();
-        scanner.nextLine();
+    public int getEdad() {
+        return edad;
+    }
 
-        Encargado encargado = new Encargado(nombreEncargado, edadEncargado);
+    public String getPuesto() {
+        return puesto;
+    }
 
-        // Pedir datos del Mecanico
-        System.out.print("Ingrese el nombre del Mecanico: ");
-        String nombreMecanico = scanner.nextLine();
-        System.out.print("Ingrese la edad del Mecanico: ");
-        int edadMecanico = scanner.nextInt();
-        scanner.nextLine();
+    public double getSalario() {
+        return salario;
+    }
 
-        Mecanico mecanico = new Mecanico(nombreMecanico, edadMecanico);
+    public String getHorario() {
+        return horario;
+    }
 
-        int opcion;
-        do {
-            System.out.println("\n MENU DE TRABAJADORES");
-            System.out.println("1. Cajero saluda");
-            System.out.println("2. Cajero cobra");
-            System.out.println("3. Encargado saluda");
-            System.out.println("4. Encargado revisa trabajo");
-            System.out.println("5. Presentacion del mecanico");
-            System.out.println("6. Salir");
-            System.out.print("Elija una opcion: ");
-            opcion = scanner.nextInt();
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
 
-            switch (opcion) {
-                case 1:
-                    cajero.saludar();
-                    break;
-                case 2:
-                    cajero.cobrar();
-                    break;
-                case 3:
-                    encargado.saludar();
-                    break;
-                case 4:
-                    encargado.revisarTrabajo();
-                    break;
-                case 5:
-                    mecanico.mostrarDatos();
-                    break;
-                case 6:
-                    System.out.println("Gracias, feliz tarde");
-                    break;
-                default:
-                    System.out.println("Opción no válida.");
-            }
-        } while (opcion != 6);
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
 
-        scanner.close();
+    public String resumen() {
+        return nombre + " (" + puesto + ", " + edad + " años)";
     }
 }
+
 
 
