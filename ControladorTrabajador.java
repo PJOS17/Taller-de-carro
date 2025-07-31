@@ -20,7 +20,7 @@ public class ControladorTrabajador {
         int edadEncargado = vista.pedirEntero("Edad del Encargado:");
         encargado = new Trabajador(nombreEncargado, edadEncargado, "Encargado");
         encargado.setSalario(3000);
-        encargado.setHorario("10am - 6pm");
+        encargado.setHorario("10am - 7pm");
 
         String nombreMecanico = vista.pedirTexto("Nombre del Mecánico:");
         int edadMecanico = vista.pedirEntero("Edad del Mecánico:");
