@@ -1,7 +1,7 @@
 public class ProductoControlador {
-    private Piezas piezas;
-    private LLantas llantas;
-    private Carro carro;
+    Piezas piezas;
+    LLantas llantas;
+    Carro carro;
     private ProductoVista vista;
 
     public ProductoControlador(ProductoVista vista) {

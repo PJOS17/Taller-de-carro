@@ -12,7 +12,7 @@ public class ProductoVista {
     public int pedirEntero(String mensaje) {
         System.out.print(mensaje);
         int valor = scanner.nextInt();
-        scanner.nextLine(); // Limpiar buffer
+        scanner.nextLine(); 
         return valor;
     }
 
