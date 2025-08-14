@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import javax.swing.*;
 
 public class Graico extends JFrame {
@@ -22,6 +24,14 @@ public class Graico extends JFrame {
         areaInfo.setEditable(false);
         add(new JScrollPane(areaInfo), BorderLayout.CENTER);
 
+        // Redirigir System.out a areaInfo
+        PrintStream printStream = new PrintStream(new OutputStream() {
+            @Override
+            public void write(int b) {
+                areaInfo.append(String.valueOf((char) b));
+            }
+        });
+        System.setOut(printStream);
 
         JPanel panelBotones = new JPanel(new GridLayout(5, 2, 5, 5));
         String[] opciones = {
