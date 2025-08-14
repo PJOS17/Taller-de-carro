@@ -40,8 +40,17 @@ public class Trabajador {
     }
 
     public String resumen() {
-        return nombre + " (" + puesto + ", " + edad + " años)";
+        return nombre + " (" + puesto + ", " + edad + " años)"+ "\nSalario: Q" + salario + "\nHorario: " + horario;
     }
+
+    public void setEdad(int edad2) {
+        throw new UnsupportedOperationException("Unimplemented method 'setEdad'");
+    }
+
+    public void setNombre(String nombre2) {
+        throw new UnsupportedOperationException("Unimplemented method 'setNombre'");
+    }
+}
 }
 
 
